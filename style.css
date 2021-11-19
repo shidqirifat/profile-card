@@ -17,10 +17,8 @@ body {
 }
 .container {
   position: relative;
-  width: 100%;
-  max-width: 280px;
-  height: 100%;
-  max-height: 280px;
+  width: 250px;
+  height: 250px;
   background: #393e46;
   color: white;
   border-radius: 20px;
@@ -42,26 +40,27 @@ body {
   transition: all 0.5s;
 }
 .profile-img {
-  width: 40%;
+  width: 37%;
   border-radius: 50%;
 }
 .profile-name {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  padding-top: 1.3rem;
-  padding-bottom: 0.7rem;
+  padding-top: 1.2rem;
+  padding-bottom: 0.5rem;
 }
 .profile-title {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.45);
 }
-.container i:not(.socials i) {
+.container .arrow,
+.container .close {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: absolute;
@@ -74,6 +73,9 @@ body {
   transition: all 0.3s;
   cursor: pointer;
 }
+.arrow i {
+  transform: rotate(45deg);
+}
 .container i:not(.socials i):hover {
   background: white;
 }
@@ -82,7 +84,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 30px;
+  gap: 1.3rem;
   padding: 40px 30px;
   right: 82%;
   bottom: 182%;
@@ -92,7 +94,7 @@ body {
   transition: all 0.5s;
   /* border: 2px solid #0f314d; */
 }
-.non-active {
+.profile-container.non-active {
   opacity: 0;
 }
 .active {
@@ -104,7 +106,7 @@ body {
   transform: rotate(0);
 }
 .skill-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 .skills {
@@ -113,7 +115,7 @@ body {
 }
 .skill {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   /* font-weight: 600; */
   width: max-content;
   padding: 0.5rem 0.9rem;
@@ -126,10 +128,11 @@ body {
 }
 .socials {
   display: grid;
-  grid-template-columns: repeat(3, minmax(max-content, 50px));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  gap: 1.3rem;
 }
 .socials i {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: rgba(34, 40, 49, 0.8);
 }
 .socials i:hover {
